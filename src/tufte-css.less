@@ -12,7 +12,16 @@
   .tufte-fonts();
   .tufte-fonts() when (@tufte-use-fonts = true) and (@tufte-use-global-fonts = false) { .apply-tufte-fonts(); }
   .tufte-chapters();
-}
 
-// Responsive
-@media (min-width: 768px) { .tufte { .make-tufte-sections(25%, 1em); } }
+  @media (min-width: 768px) {
+    .make-tufte-sections(25%);
+    .make-tufte-section-asides(25%, 1em);
+  }
+
+  @media (max-width: 767px) {
+    .aside + cite {
+      display: none;
+      position: absolute;
+    }
+  }
+}

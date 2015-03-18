@@ -1,5 +1,5 @@
+.make-tufte-section-asides(@aside-width: 25vw, @gutter-width: 1vw) {
 
-.make-tufte-sections(@aside-width: 25vw, @gutter-width: 1vw) {
   .tufte-floater() {
     .calc-width() when (get-unit(@gutter-width) = get-unit(@aside-width)) {
       width: @aside-width - @gutter-width;
@@ -19,6 +19,29 @@
     margin-right: -@aside-width;
   }
 
+  section, .tufte-section {
+    .aside {
+      &[href]:not([href^='#'])::before,
+      &.auto::after,
+      + cite {
+        .tufte-floater();
+        .tufte-pull();
+      }
+    }
+
+     aside {
+      .tufte-floater();
+    }
+  }
+
+  figure > figcaption {
+    .tufte-floater();
+    .tufte-pull();
+  }
+}
+
+
+.make-tufte-sections(@aside-width: 25vw) {
   section, .tufte-section {
 
     > p {
@@ -62,20 +85,9 @@
       }
 
       &[href]:not([href^='#'])::before,
-      &.auto::after,
-      + cite {
-        .make-tufte-sections .tufte-floater();
-        .make-tufte-sections .tufte-pull();
-      }
-
-      &[href]:not([href^='#'])::before,
       &.auto::after  {
         content: counter(tufte-footnote-counter) ". " attr(href);
       }
-    }
-
-    > aside {
-      .make-tufte-sections .tufte-floater();
     }
   }
 
@@ -104,9 +116,6 @@
   }
 
   > figcaption {
-    .make-tufte-sections .tufte-floater();
-    .make-tufte-sections .tufte-pull();
-
     &::before {
       counter-increment: tufte-code-counter;
       content: "Code " counter(tufte-code-counter) ": ";
@@ -149,9 +158,6 @@
   }
 
   > figcaption {
-    .make-tufte-sections .tufte-floater();
-    .make-tufte-sections .tufte-pull();
-
     &::before {
       counter-increment: tufte-table-counter;
       content: "Table " counter(tufte-table-counter) ": ";
