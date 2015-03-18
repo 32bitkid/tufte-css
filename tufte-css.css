@@ -1,0 +1,413 @@
+.tufte-font.serif,
+.tufte {
+  font-family: "Palatino", serif;
+}
+.tufte-font.sans,
+.tufte h1 {
+  font-family: "Helvetica", sans-serif;
+}
+.tufte-font.monospace,
+.tufte code {
+  font-family: monospace;
+}
+.tufte-font.body,
+.tufte-font.heading,
+.tufte p,
+.tufte cite,
+.tufte h2,
+.tufte h3,
+.tufte h4 {
+  font-weight: normal;
+}
+.tufte-font.heading,
+.tufte h2,
+.tufte h3,
+.tufte h4 {
+  font-style: italic;
+}
+.tufte-font.tiny {
+  font-size: 50%;
+  line-height: 1.2;
+}
+.tufte-font.script {
+  font-size: 70%;
+  line-height: 1.14285714;
+}
+.tufte-font.footnote {
+  font-size: 80%;
+  line-height: 1.25;
+}
+.tufte-font.small {
+  font-size: 90%;
+  line-height: 1.33333333;
+}
+.tufte-font.normal,
+.tufte p,
+.tufte cite {
+  font-size: 100%;
+  line-height: 1.4;
+}
+.tufte-font.big,
+.tufte h4 {
+  font-size: 110%;
+  line-height: 1.36363636;
+}
+.tufte-font.large,
+.tufte h3 {
+  font-size: 120%;
+  line-height: 1.33333333;
+}
+.tufte-font.huge,
+.tufte h2 {
+  font-size: 200%;
+  line-height: 1.5;
+}
+.tufte-font.epic,
+.tufte h1 {
+  font-size: 240%;
+  line-height: 1.5;
+}
+.tufte-font.smallcaps,
+.tufte .newthought {
+  font-variant: small-caps;
+  letter-spacing: 1.5;
+}
+.tufte {
+  counter-reset: tufte-footnote-counter 0 tufte-table-counter 0 tufte-code-counter 0;
+  font-size: 12pt;
+}
+.tufte h1,
+.tufte h2,
+.tufte h3,
+.tufte h4,
+.tufte h5,
+.tufte h6 {
+  clear: right;
+}
+.tufte cite {
+  font-style: normal;
+}
+.tufte code {
+  background-color: #ddd;
+  padding: 0.25em;
+  border-radius: 0.25em;
+}
+.tufte .tufte-chapter {
+  min-height: 100vh;
+}
+.tufte .tufte-chapter > h1:first-child,
+.tufte .tufte-chapter > h2:first-child,
+.tufte .tufte-chapter > h3:first-child,
+.tufte .tufte-chapter > h4:first-child,
+.tufte .tufte-chapter > h5:first-child,
+.tufte .tufte-chapter > h6:first-child {
+  margin-bottom: 3em;
+}
+.tufte .tufte-chapter::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.tufte .tufte-chapter + .tufte-chapter {
+  margin-top: 5em;
+}
+@media (min-width: 1000px) {
+  .tufte section > p,
+  .tufte .tufte-section > p {
+    padding-right: 20vw;
+    text-indent: 3ch;
+    margin-bottom: 0.25em;
+    margin-top: 0;
+  }
+  .tufte section > h1 + p,
+  .tufte .tufte-section > h1 + p,
+  .tufte section > h2 + p,
+  .tufte .tufte-section > h2 + p,
+  .tufte section > h3 + p,
+  .tufte .tufte-section > h3 + p,
+  .tufte section > h4 + p,
+  .tufte .tufte-section > h4 + p,
+  .tufte section > h5 + p,
+  .tufte .tufte-section > h5 + p,
+  .tufte section > h6 + p,
+  .tufte .tufte-section > h6 + p,
+  .tufte section > p:first-child,
+  .tufte .tufte-section > p:first-child,
+  .tufte section > figure + p,
+  .tufte .tufte-section > figure + p {
+    text-indent: 0;
+    margin-top: 1em;
+  }
+  .tufte section a.aside,
+  .tufte .tufte-section a.aside,
+  .tufte section a.aside:visited,
+  .tufte .tufte-section a.aside:visited,
+  .tufte section a.aside:active,
+  .tufte .tufte-section a.aside:active,
+  .tufte section a.aside:hover,
+  .tufte .tufte-section a.aside:hover {
+    color: currentColor;
+    text-decoration: none;
+  }
+  .tufte section .aside.num,
+  .tufte .tufte-section .aside.num {
+    counter-increment: tufte-footnote-counter;
+  }
+  .tufte section .aside.num::after,
+  .tufte .tufte-section .aside.num::after,
+  .tufte section .aside.num + cite::before,
+  .tufte .tufte-section .aside.num + cite::before {
+    vertical-align: super;
+    content: counter(tufte-footnote-counter);
+    font-size: 70%;
+    line-height: 1.14285714;
+  }
+  .tufte section .aside.num + cite::before,
+  .tufte .tufte-section .aside.num + cite::before {
+    margin-left: .5ch;
+    margin-right: .5ch;
+  }
+  .tufte section .aside[href]:not([href^='#']),
+  .tufte .tufte-section .aside[href]:not([href^='#']) {
+    text-decoration: underline;
+  }
+  .tufte section .aside[href]:not([href^='#'])::before,
+  .tufte .tufte-section .aside[href]:not([href^='#'])::before,
+  .tufte section .aside.auto::after,
+  .tufte .tufte-section .aside.auto::after {
+    content: counter(tufte-footnote-counter) ". " attr(href);
+  }
+  .tufte figure.tufte-code {
+    margin: 0;
+    padding-right: 20vw;
+  }
+  .tufte figure.tufte-code > code {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+    padding: 1em;
+    font-size: 90%;
+    line-height: 1.33333333;
+    display: block;
+    white-space: pre;
+    overflow: auto;
+  }
+  .tufte figure.tufte-code > figcaption::before {
+    counter-increment: tufte-code-counter;
+    content: "Code " counter(tufte-code-counter) ": ";
+  }
+  .tufte figure.tufte-table {
+    margin: 0;
+    padding-right: 20vw;
+  }
+  .tufte figure.tufte-table > table {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+    border-collapse: collapse;
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+  }
+  .tufte figure.tufte-table > table > thead > tr > td,
+  .tufte figure.tufte-table > table > tbody > tr > td,
+  .tufte figure.tufte-table > table > thead > tr > th,
+  .tufte figure.tufte-table > table > tbody > tr > th {
+    padding: 0.33em 1em;
+    font-weight: normal;
+  }
+  .tufte figure.tufte-table > table > thead + tbody > tr:first-child > td,
+  .tufte figure.tufte-table > table > thead + tbody > tr:first-child > th {
+    border-top: 1px solid currentColor;
+  }
+  .tufte figure.tufte-table > table > thead > tr > th[rowspan] {
+    vertical-align: bottom;
+  }
+  .tufte figure.tufte-table > table > thead > tr > th[colspan] {
+    text-align: center;
+    border-bottom: 1px solid currentColor;
+  }
+  .tufte figure.tufte-table > figcaption::before {
+    counter-increment: tufte-table-counter;
+    content: "Table " counter(tufte-table-counter) ": ";
+  }
+  .tufte section .aside[href]:not([href^='#'])::before,
+  .tufte .tufte-section .aside[href]:not([href^='#'])::before,
+  .tufte section .aside.auto::after,
+  .tufte .tufte-section .aside.auto::after,
+  .tufte section .aside + cite,
+  .tufte .tufte-section .aside + cite {
+    float: right;
+    clear: right;
+    margin-bottom: 1em;
+    font-size: 80%;
+    line-height: 1.25;
+    width: 19vw;
+    text-indent: 0;
+    margin-right: -20vw;
+  }
+  .tufte section aside,
+  .tufte .tufte-section aside {
+    float: right;
+    clear: right;
+    margin-bottom: 1em;
+    font-size: 80%;
+    line-height: 1.25;
+    width: 19vw;
+  }
+  .tufte figure > figcaption {
+    float: right;
+    clear: right;
+    margin-bottom: 1em;
+    font-size: 80%;
+    line-height: 1.25;
+    width: 19vw;
+    text-indent: 0;
+    margin-right: -20vw;
+  }
+}
+@media (max-width: 999px) {
+  .tufte section > p,
+  .tufte .tufte-section > p {
+    padding-right: 0;
+    text-indent: 3ch;
+    margin-bottom: 0.25em;
+    margin-top: 0;
+  }
+  .tufte section > h1 + p,
+  .tufte .tufte-section > h1 + p,
+  .tufte section > h2 + p,
+  .tufte .tufte-section > h2 + p,
+  .tufte section > h3 + p,
+  .tufte .tufte-section > h3 + p,
+  .tufte section > h4 + p,
+  .tufte .tufte-section > h4 + p,
+  .tufte section > h5 + p,
+  .tufte .tufte-section > h5 + p,
+  .tufte section > h6 + p,
+  .tufte .tufte-section > h6 + p,
+  .tufte section > p:first-child,
+  .tufte .tufte-section > p:first-child,
+  .tufte section > figure + p,
+  .tufte .tufte-section > figure + p {
+    text-indent: 0;
+    margin-top: 1em;
+  }
+  .tufte section a.aside,
+  .tufte .tufte-section a.aside,
+  .tufte section a.aside:visited,
+  .tufte .tufte-section a.aside:visited,
+  .tufte section a.aside:active,
+  .tufte .tufte-section a.aside:active,
+  .tufte section a.aside:hover,
+  .tufte .tufte-section a.aside:hover {
+    color: currentColor;
+    text-decoration: none;
+  }
+  .tufte section .aside.num,
+  .tufte .tufte-section .aside.num {
+    counter-increment: tufte-footnote-counter;
+  }
+  .tufte section .aside.num::after,
+  .tufte .tufte-section .aside.num::after,
+  .tufte section .aside.num + cite::before,
+  .tufte .tufte-section .aside.num + cite::before {
+    vertical-align: super;
+    content: counter(tufte-footnote-counter);
+    font-size: 70%;
+    line-height: 1.14285714;
+  }
+  .tufte section .aside.num + cite::before,
+  .tufte .tufte-section .aside.num + cite::before {
+    margin-left: .5ch;
+    margin-right: .5ch;
+  }
+  .tufte section .aside[href]:not([href^='#']),
+  .tufte .tufte-section .aside[href]:not([href^='#']) {
+    text-decoration: underline;
+  }
+  .tufte section .aside[href]:not([href^='#'])::before,
+  .tufte .tufte-section .aside[href]:not([href^='#'])::before,
+  .tufte section .aside.auto::after,
+  .tufte .tufte-section .aside.auto::after {
+    content: counter(tufte-footnote-counter) ". " attr(href);
+  }
+  .tufte figure.tufte-code {
+    margin: 0;
+    padding-right: 0;
+  }
+  .tufte figure.tufte-code > code {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+    padding: 1em;
+    font-size: 90%;
+    line-height: 1.33333333;
+    display: block;
+    white-space: pre;
+    overflow: auto;
+  }
+  .tufte figure.tufte-code > figcaption::before {
+    counter-increment: tufte-code-counter;
+    content: "Code " counter(tufte-code-counter) ": ";
+  }
+  .tufte figure.tufte-table {
+    margin: 0;
+    padding-right: 0;
+  }
+  .tufte figure.tufte-table > table {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+    border-collapse: collapse;
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+  }
+  .tufte figure.tufte-table > table > thead > tr > td,
+  .tufte figure.tufte-table > table > tbody > tr > td,
+  .tufte figure.tufte-table > table > thead > tr > th,
+  .tufte figure.tufte-table > table > tbody > tr > th {
+    padding: 0.33em 1em;
+    font-weight: normal;
+  }
+  .tufte figure.tufte-table > table > thead + tbody > tr:first-child > td,
+  .tufte figure.tufte-table > table > thead + tbody > tr:first-child > th {
+    border-top: 1px solid currentColor;
+  }
+  .tufte figure.tufte-table > table > thead > tr > th[rowspan] {
+    vertical-align: bottom;
+  }
+  .tufte figure.tufte-table > table > thead > tr > th[colspan] {
+    text-align: center;
+    border-bottom: 1px solid currentColor;
+  }
+  .tufte figure.tufte-table > figcaption::before {
+    counter-increment: tufte-table-counter;
+    content: "Table " counter(tufte-table-counter) ": ";
+  }
+  .tufte .aside + cite {
+    display: none;
+    position: absolute;
+  }
+  .tufte .aside + cite:target {
+    display: block;
+    position: fixed;
+    background-color: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 2em;
+  }
+  .tufte .aside.num[href]:not([href^='#'])::before,
+  .tufte .aside.num[href]:not([href^='#'])::after {
+    content: none;
+  }
+  .tufte figure > figcaption {
+    text-align: center;
+    margin-top: 1.4em;
+  }
+}

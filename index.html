@@ -1,0 +1,251 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="tufte-css.css">
+    <style>
+:root { margin: 4em 4em; padding: 0; }
+body { margin: 0; padding: 0; }
+#page-numbers thead tr:first-child th:first-child {
+  text-align: left;
+}
+
+#page-numbers tbody td:nth-child(n+2) {
+  text-align: center;
+}
+
+#font-table thead th:nth-child(1),
+#font-table thead th:nth-child(4) {
+  text-align: left;
+}
+
+#font-table tbody td:nth-child(2),
+#font-table tbody td:nth-child(3) {
+  text-align: center;
+}
+    </style>
+  </head>
+  <body class="tufte">
+
+    <div class="tufte-front-matter">
+      <div class="tufte-chapter">
+        <h2>Introduction</h2>
+        <section>
+          <p>
+            This sample document discusses the design of <a href="#tufte-books" class="aside num">Edward Tufte&rsquo;s books</a>
+            <cite id="tufte-books">
+              Edward R. Tufte. <em>The Visual Display of Quantitative Information.</em> Graphics Press, Cheshire, Connecticut, 2001. ISBN 0-9613921-4-2;
+              Edward R. Tufte. <em>Envisioning Information.</em> Graphics Press, Cheshire, Connecticut, 1990. ISBN 0-9613921-1-8;
+              Edward R. Tufte. <em>Visual Explanations.</em> Graphics Press, Cheshire, Connecticut, 1997. ISBN 0-9613921-2-6;
+              and Edward R. Tufte. <em>Beautiful Evidence.</em> Graphics Press, LLC, first edition, May 2006. ISBN 0-9613921-7-7
+            </cite>
+             and the use of the <code>tufte-css</code>.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <div class="tufte-main-matter">
+      <div class="tufte-chapter">
+        <h2>The Design of Tufte&rsquo;s Books</h2>
+        <section>
+          <p><span class="newthought">The pages</span> of a book are usually divided into three major sections: the front matter (also called preliminary matter or prelim), the main matter (the core text of the book), and the back matter (or end matter).</p>
+        </section>
+        <section>
+          <p><span class="newthought">The front matter</span> of a book refers to all of the material that comes before the main text. The following table from shows a list of material that appears in the front matter of The Visual Display of Quantitative Information, Envisioning Information, Visual Explanations, and Beautiful Evidence along with its page number. Page numbers that appear in parentheses refer to folios that do not have a printed page number (but they are still counted in the page number sequence).</p>
+
+          <figure class="tufte-table">
+            <table id="page-numbers">
+              <thead>
+                <tr>
+                  <th rowspan="2">Page content</th>
+                  <th colspan="4">Books</th>
+                </tr>
+                <tr>
+                  <th>VDQI</th>
+                  <th>EI</th>
+                  <th>VI</th>
+                  <th>BE</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Blank half title page</td>
+                  <td>(1)</td>
+                  <td>(1)</td>
+                  <td>(1)</td>
+                  <td>(1)</td>
+                </tr>
+                <tr>
+                  <td>Frontispiece</td>
+                  <td>(2)</td>
+                  <td>(2)</td>
+                  <td>(2)</td>
+                  <td>(2)</td>
+                </tr>
+                <tr>
+                  <td>Full title page</td>
+                  <td>(3)</td>
+                  <td>(3)</td>
+                  <td>(3)</td>
+                  <td>(3)</td>
+                </tr>
+                <tr>
+                  <td>Copyright page</td>
+                  <td>(4)</td>
+                  <td>(4)</td>
+                  <td>(4)</td>
+                  <td>(4)</td>
+                </tr>
+                <tr>
+                  <td>Contents</td>
+                  <td>(5)</td>
+                  <td>(5)</td>
+                  <td>(5)</td>
+                  <td>(5)</td>
+                </tr>
+                <tr>
+                  <td>Dedication</td>
+                  <td>(6)</td>
+                  <td>(7)</td>
+                  <td>(7)</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>Epigraph</td>
+                  <td>&ndash;</td>
+                  <td>&ndash;</td>
+                  <td>(8)</td>
+                  <td>&ndash;</td>
+                </tr>
+                <tr>
+                  <td>Introduction</td>
+                  <td>(7)</td>
+                  <td>(9)</td>
+                  <td>(9)</td>
+                  <td>9</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+
+          <p>The design of the front matter in Tufte&rsquo;s books varies slightly from the traditional design of front matter. First, the pages in front matter are traditionally numbered with lowercase roman numerals (e.g., i, ii, iii, iv, . . . ). Second, the front matter page numbering sequence is usually separate from the main matter page numbering. That is, the page numbers restart at 1 when the main matter begins. In contrast, Tufte has enumerated his pages with arabic numerals that share the same page counting sequence as the main matter.</p>
+          <p>There are also some variations in design across Tufte&rsquo;s four books. The page opposite the full title page (labeled &ldquo;frontispiece&rdquo; in the above table) has different content in each of the books. In <em>The Visual Display of Quantitative Information</em>, this page is blank; in <em>Envisioning Information and Visual Explanations</em>, this page holds a frontispiece; and in <em>Beautiful Evidence</em>, this page contains three epigraphs.</p>
+          <p>The dedication appears on page 6 in <em>VDQI</em> (opposite the introduction), and is placed on its own spread in the other books. In <em>VE</em>, an epigraph shares the spread with the opening page of the introduction.</p>
+          <p>None of the page numbers (folios) of the front matter are expressed except in <em>BE</em>, where the folios start to appear on the dedication page.</p>
+        </section>
+        <section>
+          <h3>Typefaces &amp; Fonts</h3>
+
+          <p>Tufte&rsquo;s books primarily use two typefaces: Bembo and Gill Sans. Bembo is used for the headings and body text, while Gill Sans is used for the title page and opening epigraphs in Beautiful Evidence.</p>
+          <aside>These typeface defaults are customizable by editing the <code>tufte-variables.less</code> file and recompiling.</aside>
+          <p>Since neither Bembo nor Gill Sans are available in default in most browsers, the <code>tufte-css</code> document classes default to using Palatino and Helvetica, respectively. In addition, the Bera Mono typeface is used for monospaced type.</p>
+          <p>The following font sizes are defined by the css classes:</p>
+
+          <figure class="tufte-table">
+            <figcaption>A list of CSS font sizes as defined by the <code>tufte-css</code> classes.</figcaption>
+            <table id="font-table">
+              <thead>
+                <tr>
+                  <th>CSS Class</th><th>Font size</th><th>Line height</th><th>Used for</th>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td><code>.tufte-font.tiny</code></td>
+                    <td>50%</td><td>1.2</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><code>.tufte-font.script</code></td>
+                    <td>70%</td><td>&approx; 1.14</td>
+                    <td>Superscript size</td>
+                  </tr>
+                  <tr>
+                    <td><code>.tufte-font.footnote</code></td>
+                    <td>80%</td><td>1.25</td>
+                    <td>Sidenotes, captions</td>
+                  </tr>
+                  <tr>
+                    <td><code>.tufte-font.small</code></td>
+                    <td>90%</td><td>&approx; 1.33</td>
+                    <td>quotations</td>
+                  </tr>
+                  <tr>
+                    <td><code>.tufte-font.normal</code></td>
+                    <td>100%</td><td>1.4</td>
+                    <td>body text</td>
+                  </tr>
+                  <tr>
+                    <td><code>.tufte-font.big</code></td>
+                    <td>110%</td><td>&approx; 1.36</td>
+                    <td><code>h4</code> element</td>
+                  </tr>
+                  <tr>
+                    <td><code>.tufte-font.large</code></td>
+                    <td>120%</td><td>&approx; 1.33</td>
+                    <td><code>h3</code> element</td>
+                  </tr>
+                  <tr>
+                    <td><code>.tufte-font.huge</code></td>
+                    <td>200%</td><td>1.5</td>
+                    <td><code>h2</code> element</td>
+                  </tr>
+                  <tr>
+                    <td><code>.tufte-font.epic</code></td>
+                    <td>240%</td><td>1.5</td>
+                    <td><code>h1</code> element</td>
+                  </tr>
+                </tbody>
+              </thead>
+            </table>
+          </figure>
+        </section>
+
+        <section>
+          <h3>Links &amp; Citations</h3>
+          <p><span class="newthought">Hyperlinks and citations</span> are fundamental to the web. Links and citations are automatically generated with asides when possible. A basic link, opting into the "aside" generation, looks like this: </p>
+          <figure class="tufte-code">
+            <figcaption>A simple link.</figcaption>
+            <code>Search &lt;a href="http://google.com" class="aside num"&gt;Google&lt;/a&gt; to find more information.</code>
+          </figure>
+          More detailed citations can be generated by adding a sibling <code>&lt;cite&gt;</code> element to the link.</p>
+          <figure class="tufte-code">
+            <figcaption>A more complex citation with multiple references.</figcaption>
+            <code>...based on &lt;a href="#multi-cite" class="aside num"&gt;other works&lt;/a&gt;
+&lt;cite id='multi-cite'&gt;
+  &lt;a href="http://codepen.io/" class="aside num"&gt;Example 1&lt;/a&gt; and
+  &lt;a href="http://codepen.io/" class="aside num"&gt;Example 2&lt;/a&gt;.
+&lt;/cite&gt;</code>
+          </figure>
+          <p>General text asides can also be included by using the <code>&lt;aside&gt;</code> element.</p>
+          <figure class="tufte-code">
+            <figcaption>A non-citation or link aside.</figcaption>
+            <code>&lt;aside&gt;This is a random thought...&lt;/aside&gt;</code>
+          </figure>
+        </section>
+
+        <section>
+          <h3>Code Blocks</h3>
+          <p><span class="newthought">Code is important</span>; however, to my knowledge, there are no examples of code references in Tufte&rsquo;s books. The default style implemented for code block in <code>tufte-css</code> are based on example tables in Tufte&rsquo;s, and draw inspiration from <a class="aside num" href="http://github.com">GitHub</a> styled markdown.</p>
+          <figure class="tufte-code">
+            <figcaption>Example usage of the <code>tufte-code</code> class</figcaption>
+            <code>&lt;figure class="tufte-code"&gt;
+  &lt;code&gt;
+    /* Place the code here */
+  &lt;/code&gt;
+&lt;/figure&gt;</code>
+          </figure>
+          <p>Adding captions to code references is also easy:</p>
+          <figure class="tufte-code">
+            <figcaption>Example  of captioning a <code>tufte-code</code></figcaption>
+            <code>&lt;figure class="tufte-code"&gt;
+  &lt;figcaption&gt;Code caption&lt;/figcaption&gt;
+  &lt;code&gt;
+    /* Place the code here */
+  &lt;/code&gt;
+&lt;/figure&gt;</code>
+          </figure>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
