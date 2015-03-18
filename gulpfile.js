@@ -7,7 +7,7 @@ gulp.task('css', function() {
   return gulp.src("src/tufte-css.less")
   .pipe(less())
   .pipe(autoprefixer())
-  .pipe(gulp.dest("css"));
+  .pipe(gulp.dest("dist"));
 });
 
 gulp.task('watch', function() {
