@@ -1,0 +1,19 @@
+.tufte-chapters() {
+  .tufte-chapter {
+    >h1,>h2,>h3,>h4,>h5,>h6 {
+      &:first-child {
+        margin-bottom: 3em;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    + .tufte-chapter {
+      margin-top: 5em;
+    }
+  }
+}

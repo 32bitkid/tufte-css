@@ -1,0 +1,18 @@
+@import 'tufte-variables.less';
+@import 'tufte-fonts.less';
+@import 'tufte-core.less';
+@import 'tufte-chapters.less';
+@import 'tufte-section.less';
+
+:root when (@tufte-use-fonts = true) and (@tufte-use-global-fonts = true) { .apply-tufte-fonts(); }
+
+// Basic
+.tufte {
+  .tufte-core();
+  .tufte-fonts();
+  .tufte-fonts() when (@tufte-use-fonts = true) and (@tufte-use-global-fonts = false) { .apply-tufte-fonts(); }
+  .tufte-chapters();
+}
+
+// Responsive
+@media (min-width: 768px) { .tufte { .make-tufte-sections(25%, 1em); } }

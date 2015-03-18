@@ -1,0 +1,43 @@
+.tufte-font {
+  &.serif        { font-family: @tufte-font-serif; }
+  &.sans         { font-family: @tufte-font-sans; }
+  &.monospace    { font-family: @tufte-font-monospace; }
+
+  &.body         { font-weight: normal; }
+  &.heading      { &:extend(.tufte-font.body);  font-style: italic; }
+
+  &.tiny         { font-size:  50%; line-height: ( 6 /  5); }
+  &.script       { font-size:  70%; line-height: ( 8 /  7); }
+  &.footnote     { font-size:  80%; line-height: (10 /  8); }
+  &.small        { font-size:  90%; line-height: (12 /  9); }
+  &.normal       { font-size: 100%; line-height: (14 / 10); }
+  &.big          { font-size: 110%; line-height: (15 / 11); }
+  &.large        { font-size: 120%; line-height: (16 / 12); }
+  &.huge         { font-size: 200%; line-height: (30 / 20); }
+  &.epic         { font-size: 240%; line-height: (36 / 24); }
+
+  &.smallcaps when (isstring(@tufte-font-smallcaps))  { font-family: @tufte-font-smallcaps; letter-spacing: 1.5; }
+  &.smallcaps when (@tufte-font-smallcaps = false) { font-variant: small-caps; letter-spacing: 1.5; }
+}
+
+.apply-tufte-fonts() {
+  &:extend(.tufte-font.serif);
+  font-size: @tufte-font-base-size;
+
+  h1 { &:extend(.tufte-font.sans, .tufte-font.epic, .tufte-font.part); }
+  h2 { &:extend(.tufte-font.huge, .tufte-font.heading); }
+  h3 { &:extend(.tufte-font.large, .tufte-font.heading); }
+  h4 { &:extend(.tufte-font.big, .tufte-font.heading); }
+  p, cite { &:extend(.tufte-font.body, .tufte-font.normal); }
+  code { &:extend(.tufte-font.monospace); }
+
+  .newthought { &:extend(.tufte-font.smallcaps); }
+
+  cite { font-style: normal; }
+
+  code {
+    background-color: #ddd;
+    padding: 0.25em;
+    border-radius: 0.25em;
+  }
+}
