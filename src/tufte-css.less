@@ -13,15 +13,34 @@
   .tufte-fonts() when (@tufte-use-fonts = true) and (@tufte-use-global-fonts = false) { .apply-tufte-fonts(); }
   .tufte-chapters();
 
-  @media (min-width: 768px) {
-    .make-tufte-sections(25%);
-    .make-tufte-section-asides(25%, 1em);
+  @media (min-width: 1000px) {
+    .make-tufte-sections(20vw);
+    .make-tufte-section-asides(20vw, 1vw);
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 999px) {
+    .make-tufte-sections(0);
+
     .aside + cite {
       display: none;
       position: absolute;
+    }
+
+    .aside + cite:target {
+      display: block;
+      position: fixed;
+      background-color: white;
+      left:0; right: 0; top:0; bottom: 0;
+      padding: 2em;
+    }
+
+    .aside.num[href]:not([href^='#']) {
+      &::before, &::after { content: none; }
+    }
+
+    figure > figcaption {
+      text-align: center;
+      margin-top: 1.4em;
     }
   }
 }
